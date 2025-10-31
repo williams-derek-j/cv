@@ -1,16 +1,20 @@
 import '../styles/Personal.css'
-import Name from './Personal/Name.jsx'
-import Email from './Personal/Email.jsx'
-import Phone from './Personal/Phone.jsx'
 
 function Personal() {
+    const modules = import.meta.glob("./Personal/*.jsx", { eager: true })
+
+    const components = {}
+    for (let i = 0; i < Object.keys(modules).length; i++) {
+        components[i] = Object.values(modules)[i].default
+    }
+
     return (
         <section id="" className="section-personal section">
-            <h1 id="header-personal>" className="header">About you:</h1>
-            <form id="form-personal" className="form">
-                <Name />
-                <Email />
-                <Phone />
+            <h1 id=">" className="header-personal header">About you:</h1>
+            <form id="" className="form-personal form">
+                {Object.entries(components).map(([key, Component]) => {
+                    return <Component key={key}/>
+                })}
                 <button id="button-submit" className="button">Submit</button>
             </form>
             <button id="button-edit" className="button visually-hidden">Edit</button>

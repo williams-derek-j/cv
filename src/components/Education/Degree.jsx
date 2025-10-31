@@ -6,8 +6,8 @@ function Degree() {
                 <option value="Bachelor's of Arts">Bachelor's of Arts</option>
                 <option value="Associates's of Science">Associate's of Science</option>
                 <option value="Associates's of Arts">Associate's of Arts</option>
-                <option value="Masters's of Science">Masters's of Science</option>
-                <option value="Masters's of Arts">Masters's of Arts</option>
+                <option value="Master's of Science">Master's of Science</option>
+                <option value="Master's of Arts">Master's of Arts</option>
                 <option value="Other">Other</option>
             </select>
             <label htmlFor="input-degree" className='label visually-hidden'>Degree:</label>
