@@ -1,8 +1,15 @@
+import Company from './PreviousJob/Company.jsx'
+import Title from './PreviousJob/Title.jsx'
+import JobDescription from './PreviousJob/JobDescription.jsx'
+import DateEmployed from './PreviousJob/DateEmployed.jsx'
+
 function PreviousJob() {
     return (
-        <div id="previousJob" className="component">
-            <label htmlFor="input-company" className="label">Company:</label>
-            <input id="input-college" className="input" type="text" placeholder=""/>
+        <div className="previousJob component">
+            <Company />
+            <Title />
+            <JobDescription />
+            <DateEmployed />
         </div>
     )
 }

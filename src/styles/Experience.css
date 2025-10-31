@@ -1,3 +1,10 @@
 #section-experience {
     background: red;
 }
+
+.previousJob {
+    color: black;
+    background: antiquewhite;
+
+    margin-block: 10px;
+}
