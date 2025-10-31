@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/App.css'
 import Personal from './Personal'
 import Education from './Education'
+import Experience from './Experience'
 
 function App() {
   return (
-    <>
+    <div id="app">
         <Personal />
         <Education />
+        <Experience />
               {/*<div>*/}
               {/*  <a href="https://vite.dev" target="_blank">*/}
               {/*    <img src={viteLogo} className="logo" alt="Vite logo" />*/}
@@ -25,7 +27,7 @@ function App() {
               {/*<p className="read-the-docs">*/}
               {/*  Click on the Vite and React logos to learn more*/}
               {/*</p>*/}
-    </>
+    </div>
   )
 }
 
