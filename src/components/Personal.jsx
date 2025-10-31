@@ -6,10 +6,14 @@ import Phone from './Personal/Phone.jsx'
 function Personal() {
     return (
         <section className="section-personal">
-            <div className="test>">tes234t</div>
-            <Name />
-            <Email />
-            <Phone />
+            <h1 className="header-personal>">About you:</h1>
+            <form id="form-personal" className="form">
+                <Name />
+                <Email />
+                <Phone />
+                <button id="button-submit" className="button">Submit</button>
+            </form>
+            <button id="button-edit" className="button visually-hidden">Edit</button>
         </section>
     )
 }
