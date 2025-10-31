@@ -1,8 +1,8 @@
 function Company() {
     return (
-        <div id="company" className="component">
+        <div id="" className="experience-previousJob-company component container">
             <label htmlFor="input-company" className="label">Company:</label>
-            <input id="input-company" className="input" type="text" placeholder="Microsoft"/>
+            <input name="input-company" className="input-company input" type="text" placeholder="Microsoft"/>
         </div>
     )
 }

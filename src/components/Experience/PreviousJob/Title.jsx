@@ -1,8 +1,8 @@
 function Title() {
     return (
-        <div id="title" className="component">
+        <div id="" className="experience-previousJob-title component container">
             <label htmlFor="input-title" className="label">Job Title:</label>
-            <input id="input-title" className="input" type="text" placeholder="Software Developer"/>
+            <input name="input-title" className="input-experience-previousJob-title input" type="text" placeholder="Software Developer"/>
         </div>
     )
 }

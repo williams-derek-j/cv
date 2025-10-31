@@ -10,6 +10,13 @@
   border: 0;
 }
 
+section {
+  background: antiquewhite;
+  color: black;
+
+  margin-block: 10px;
+}
+
 #root {
   background: blue;
 }

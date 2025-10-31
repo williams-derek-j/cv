@@ -5,7 +5,7 @@ import Phone from './Personal/Phone.jsx'
 
 function Personal() {
     return (
-        <section id="section-personal" className="section">
+        <section id="" className="section-personal section">
             <h1 id="header-personal>" className="header">About you:</h1>
             <form id="form-personal" className="form">
                 <Name />

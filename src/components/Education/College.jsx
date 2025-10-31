@@ -1,8 +1,8 @@
 function College() {
     return (
-        <div id="college" className="component">
+        <div id="" className="education-college component container">
             <label htmlFor="input-college" className="label">College/University:</label>
-            <input id="input-college" className="input" type="text" placeholder=""/>
+            <input name="input-college" className="input-college input" type="text" placeholder=""/>
         </div>
     )
 }

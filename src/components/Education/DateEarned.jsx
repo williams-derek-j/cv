@@ -1,8 +1,8 @@
 function DateEarned() {
     return (
-        <div id="dateEarned" className="component">
+        <div id="" className="education-dateEarned component container">
             <label htmlFor="input-dateEarned" className="label">Date earned:</label>
-            <input id="input-dateEarned" className="input" type="date" />
+            <input name="input-dateEarned" className="input-dateEarned input" type="date" />
         </div>
     )
 }

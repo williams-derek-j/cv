@@ -1,9 +1,10 @@
 import "../styles/Experience.css"
+import "../styles/Experience/PreviousJob.css"
 import PreviousJob from "./Experience/PreviousJob.jsx"
 
 function Experience() {
     return (
-        <section id="section-experience" className="section">
+        <section id="" className="section-experience section">
             <h1 id="header-experience" className="header">Experience:</h1>
             <form id="form-experience" className="form">
                 <div id="workHistory" className="component">

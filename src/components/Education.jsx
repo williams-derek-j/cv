@@ -5,7 +5,7 @@ import DateEarned from './Education/DateEarned';
 
 function Education() {
     return (
-        <section id="section-education" className="section">
+        <section id="" className="section-education section">
             <h1 id="header-education" className="header">Education:</h1>
             <form id="form-education" className="form">
                 <College />

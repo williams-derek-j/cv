@@ -1,8 +1,8 @@
 function Email() {
     return(
-        <div id="email" className="component">
+        <div id="" className="personal-email component container">
             <label htmlFor="input-email" className="label">Email:</label>
-            <input id="input-email" className="input" type="email" placeholder="e.mail@email.com" />
+            <input name="input-email" className="input-personal-email input" type="email" placeholder="e.mail@email.com" />
         </div>
     )
 }

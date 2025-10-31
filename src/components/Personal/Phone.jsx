@@ -1,8 +1,8 @@
 function Phone() {
     return (
-        <div id="phone" className="component">
+        <div id="" className="personal-phone component container">
             <label htmlFor="input-phone" className="label">Phone #:</label>
-            <input id="input-phone" className="input" type="text" placeholder="(206) 867-5309"/>
+            <input name="input-phone" className="input-personal-phone input" type="text" placeholder="(206) 867-5309"/>
         </div>
     )
 }
