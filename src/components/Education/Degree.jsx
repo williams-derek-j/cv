@@ -1,8 +1,8 @@
 function Degree(props) {
     if (props.editing) {
         return (
-            <div id="" className="education-degree component container">
-                <label htmlFor="input-select-degree" className="label-education-degree label-education label">
+            <div id="" className="degree component container">
+                <label htmlFor="input-select-degree" className="label-degree label">
                     {"Degree: "}
                     <select name="degree-type" id="select-degree-type" className="select" onChange={
                         (event) => { props.setValue(event.target.value) }
@@ -16,18 +16,18 @@ function Degree(props) {
                         <option value="Other">Other</option>
                     </select>
                 </label>
-                <label htmlFor="input-degree" className='label-education-degree label-education label visually-hidden'> {/*for manually inputting other degrees*/}
-                    Degree:
-                    <input name="input-degree" className="input-education-degree input-degree input visually-hidden" type="text" placeholder={props.value}/>
+                <label htmlFor="input-degree" className='label-degree label visually-hidden'> {/*for manually inputting other degrees*/}
+                    {"Degree: "}
+                    <input name="input-degree" className="input-degree input visually-hidden" type="text" placeholder={props.value}/>
                 </label>
             </div>
         )
     } else {
         return (
-            <div id="" className="education-college component container">
-                <label className='label-education-degree label-education label'> {/*for manually inputting other degrees*/}
-                    Degree:
-                    <span className="span-education-degree span-degree span"> {props.value}</span>
+            <div id="" className="degree component container">
+                <label className='label-degree label'> {/*for manually inputting other degrees*/}
+                    {"Degree: "}
+                    <span className="span-degree span"> {props.value}</span>
                 </label>
             </div>
         )

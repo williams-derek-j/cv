@@ -1,10 +1,10 @@
 function Phone(props) {
     if (props.editing) {
         return (
-            <div id="" className="personal-phone component container">
-                <label className="label-personal-phone label-phone label">
-                    Phone #:
-                    <input name="input-phone" className="input-personal-phone input-phone input" type="text" placeholder={props.value} onInput={
+            <div id="" className="phone component container">
+                <label className="label-phone label">
+                    {"Phone #: "}
+                    <input name="input-phone" className="input-phone input" type="text" placeholder={props.value} onInput={
                         (event) => { props.setValuePhone(event.target.value) }
                     }/>
                 </label>
@@ -12,10 +12,10 @@ function Phone(props) {
         )
     } else {
         return (
-            <div id="" className="personal-phone component container">
-                <label className="label-personal-phone label-phone label">
-                    Phone #:
-                    <span className="span-personal-phone span-phone span"> {props.value}"</span>
+            <div id="" className="phone component container">
+                <label className="label-phone label">
+                    {"Phone #: "}
+                    <span className="span-phone span"> {props.value}"</span>
                 </label>
             </div>
         )

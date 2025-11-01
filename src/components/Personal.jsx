@@ -23,7 +23,7 @@ function Personal() {
     return (
         <section id="" className="section-personal section">
             <h1 id="" className="header-personal header">About you:</h1>
-            <form id="" className="form-personal form" onSubmit={(event) => {event.preventDefault()}}>
+            <form id="" className="form-personal form" onSubmit={(event) => event.preventDefault()}>
                 <Name editing={editing} value={valueName} setValueName={setValueName} />
                 <Email editing={editing} value={valueEmail} setValueEmail={setValueEmail} />
                 <Phone editing={editing} value={valuePhone} setValuePhone={setValuePhone} />

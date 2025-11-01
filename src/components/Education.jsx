@@ -12,9 +12,9 @@ function Education() {
         setEditing(false)
     }
 
-    const [valueCollege, setValueCollege] = useState(" University of Washington")
-    const [valueDegree, setValueDegree] = useState(" Other")
-    const [valueDateEarned, setValueDateEarned] = useState(" 01/01/1994")
+    const [valueCollege, setValueCollege] = useState("University of Washington")
+    const [valueDegree, setValueDegree] = useState("Bachelor's of Science")
+    const [valueDateEarned, setValueDateEarned] = useState("01/01/1994")
 
     useEffect(() => {
         console.log('useeffect ran')
@@ -23,7 +23,7 @@ function Education() {
     return (
         <section id="" className="section-education section">
             <h1 id="header-education" className="header">Education:</h1>
-            <form id="form-education" className="form" onSubmit={(event) => {event.preventDefault()}}>
+            <form id="form-education" className="form" onSubmit={(event) => event.preventDefault()}>
                 <College editing={editing} value={valueCollege} setValue={setValueCollege}/>
                 <Degree editing={editing} value={valueDegree} setValue={setValueDegree}/>
                 <DateEarned editing={editing} value={valueDateEarned} setValue={setValueDateEarned}/>
