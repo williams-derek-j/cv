@@ -1,9 +1,13 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import DegreeOther from './Degree/DegreeOther.jsx'
 
 function Degree(props) {
-
     const [selected, setSelected] = useState(false);
+
+    useEffect(() => {
+        setSelected(false)
+    }, [props.editing])
+
     if (props.editing) {
         return (
             <div id="" className="degree component container">
@@ -29,11 +33,7 @@ function Degree(props) {
                         <option value="Other">Other</option>
                     </select>
                 </label>
-                <DegreeOther selected={selected}/>
-                {/*<label htmlFor="input-degree" className='label-degree label visually-hidden'> /!*for manually inputting other degrees*!/*/}
-                {/*    {"Degree: "}*/}
-                {/*    <input name="input-degree" className="input-degree input visually-hidden" type="text" placeholder={props.value}/>*/}
-                {/*</label>*/}
+                <DegreeOther editing={props.editing} selected={selected} setValue={props.setValue}/>
             </div>
         )
     } else {
