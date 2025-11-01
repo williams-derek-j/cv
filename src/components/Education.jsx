@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import '../styles/Education.css'
 import College from './Education/College';
 import Degree from './Education/Degree';
 import DateEarned from './Education/DateEarned';
-import {useEffect, useState} from "react";
 import ButtonSubmit from "./ButtonSubmit.jsx";
 import ButtonEdit from "./ButtonEdit.jsx";
 
@@ -25,10 +25,8 @@ function Education() {
                 <Degree editing={editing} value={valueDegree} setValue={setValueDegree}/>
                 <DateEarned editing={editing} value={valueDateEarned} setValue={setValueDateEarned}/>
                 <ButtonSubmit editing={editing} setEditing={setEditing} />
-                {/*<button id="button-submit" className="button" onClick={() => handleSubmit()}>Submit</button>*/}
             </form>
             <ButtonEdit editing={editing} setEditing={setEditing} />
-            {/*<button id="button-edit" className="button visually-hidden">Edit</button>*/}
         </section>
     )
 }

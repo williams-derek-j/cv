@@ -1,11 +1,24 @@
+import { useState } from "react";
+import DegreeOther from './Degree/DegreeOther.jsx'
+
 function Degree(props) {
+
+    const [selected, setSelected] = useState(false);
     if (props.editing) {
         return (
             <div id="" className="degree component container">
                 <label htmlFor="input-select-degree" className="label-degree label">
                     {"Degree: "}
                     <select name="degree-type" id="select-degree-type" className="select" onChange={
-                        (event) => { props.setValue(event.target.value) }
+                        (event) => {
+                            props.setValue(event.target.value)
+
+                            if (event.target.value === "Other") {
+                                setSelected(true);
+                            } else {
+                                setSelected(false);
+                            }
+                        }
                     }>
                         <option value="Bachelor's of Science">Bachelor's of Science</option>
                         <option value="Bachelor's of Arts">Bachelor's of Arts</option>
@@ -16,10 +29,11 @@ function Degree(props) {
                         <option value="Other">Other</option>
                     </select>
                 </label>
-                <label htmlFor="input-degree" className='label-degree label visually-hidden'> {/*for manually inputting other degrees*/}
-                    {"Degree: "}
-                    <input name="input-degree" className="input-degree input visually-hidden" type="text" placeholder={props.value}/>
-                </label>
+                <DegreeOther selected={selected}/>
+                {/*<label htmlFor="input-degree" className='label-degree label visually-hidden'> /!*for manually inputting other degrees*!/*/}
+                {/*    {"Degree: "}*/}
+                {/*    <input name="input-degree" className="input-degree input visually-hidden" type="text" placeholder={props.value}/>*/}
+                {/*</label>*/}
             </div>
         )
     } else {

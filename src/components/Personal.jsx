@@ -25,10 +25,8 @@ function Personal() {
                 <Email editing={editing} value={valueEmail} setValueEmail={setValueEmail} />
                 <Phone editing={editing} value={valuePhone} setValuePhone={setValuePhone} />
                 <ButtonSubmit editing={editing} setEditing={setEditing} />
-                {/*<button id="" className="button-submit-personal button-submit button" onClick={() => handleSubmit()}>Submit</button>*/}
             </form>
             <ButtonEdit editing={editing} setEditing={setEditing} />
-            {/*<button id="" className="button-edit-personal button-edit button visually-hidden">Edit</button>*/}
         </section>
     )
 }

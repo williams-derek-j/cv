@@ -1,7 +1,7 @@
+import { useEffect, useState } from "react";
 import "../styles/Experience.css"
 import "../styles/Experience/PreviousJob.css"
 import PreviousJob from "./Experience/PreviousJob.jsx"
-import {useEffect, useState} from "react";
 import ButtonEdit from "./ButtonEdit.jsx";
 import ButtonSubmit from "./ButtonSubmit.jsx";
 
@@ -20,10 +20,8 @@ function Experience() {
                     <PreviousJob editing={editing}/>
                 </div>
                 <ButtonSubmit editing={editing} setEditing={setEditing} />
-                {/*<button id="" className="button-submit button" onClick={() => handleSubmit()}>Submit</button>*/}
             </form>
             <ButtonEdit editing={editing} setEditing={setEditing} />
-            {/*<button id="" className="button-edit button visually-hidden">Edit</button>*/}
         </section>
     )
 }

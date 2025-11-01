@@ -29,18 +29,10 @@ function DateEmployed(props) {
     } else {
         return (
             <div id="" className="dateEmployed component container">
-                <div className="dateEmployed-dateBegan container">
-                    <label className="label-dateEmployed-dateBegan label-dateEmployed label">
-                        {"Date employment began: "}
-                        <span className="input-dateEmployed-dateBegan input">{valueDateBegan}</span>
-                    </label>
-                </div>
-                <div className="dateEmployed-dateEnded container">
-                    <label className="label-dateEmployed-dateEnded label-dateEmployed label">
-                        {"Date employment ended: "}
-                        <span className="input-dateEmployed-dateBegan input">{valueDateEnded}</span>
-                    </label>
-                </div>
+                <label className="label-dateEmployed label">
+                    {"Date employed: "}
+                    <span className="span-dateEmployed span">{valueDateBegan} - {valueDateEnded}</span>
+                </label>
             </div>
         )
     }
