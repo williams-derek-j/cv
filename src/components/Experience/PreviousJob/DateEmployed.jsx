@@ -9,16 +9,20 @@ function DateEmployed(props) {
         return (
             <div id="" className="dateEmployed component container">
                 <div className="dateEmployed-dateBegan container">
-                    <label htmlFor="input-dateBegan" className="label">Date employment began:</label>
-                    <input name="input-dateBegan" className="input-dateEmployed-dateBegan input" type="date" onChange={
-                        (event) => setValueDateBegan(event.target.value)
-                    }/>
+                    <label htmlFor="input-dateBegan" className="label">
+                        {"Date employment began: "}
+                        <input name="input-dateBegan" className="input-dateEmployed-dateBegan input" type="date" onChange={
+                            (event) => setValueDateBegan(event.target.value)
+                        }/>
+                    </label>
                 </div>
                 <div className="dateEmployed-dateEnded container">
-                    <label htmlFor="input-dateEnded" className="label">Date employment ended:</label>
-                    <input name="input-dateEnded" className="input-dateEmployed-dateEnded input" type="date" onChange={
-                        (event) => setValueDateEnded(event.target.value)
-                    }/>
+                    <label htmlFor="input-dateEnded" className="label">
+                        {"Date employment ended: "}
+                        <input name="input-dateEnded" className="input-dateEmployed-dateEnded input" type="date" onChange={
+                            (event) => setValueDateEnded(event.target.value)
+                        }/>
+                    </label>
                 </div>
             </div>
         )
@@ -26,12 +30,16 @@ function DateEmployed(props) {
         return (
             <div id="" className="dateEmployed component container">
                 <div className="dateEmployed-dateBegan container">
-                    <label className="label-dateEmployed-dateBegan label-dateEmployed label">Date employment began:</label>
-                    <span className="input-dateEmployed-dateBegan input">{valueDateBegan}</span>
+                    <label className="label-dateEmployed-dateBegan label-dateEmployed label">
+                        {"Date employment began: "}
+                        <span className="input-dateEmployed-dateBegan input">{valueDateBegan}</span>
+                    </label>
                 </div>
                 <div className="dateEmployed-dateEnded container">
-                    <label className="label-dateEmployed-dateEnded label-dateEmployed label">Date employment ended:</label>
-                    <span className="input-dateEmployed-dateBegan input">{valueDateEnded}</span>
+                    <label className="label-dateEmployed-dateEnded label-dateEmployed label">
+                        {"Date employment ended: "}
+                        <span className="input-dateEmployed-dateBegan input">{valueDateEnded}</span>
+                    </label>
                 </div>
             </div>
         )

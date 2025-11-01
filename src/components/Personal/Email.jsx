@@ -4,7 +4,7 @@ function Email(props) {
             <div id="" className="email component container">
                 <label className="label">
                     {"Email: "}
-                    <input name="input-email" className="input-email input" type="email" placeholder={props.value} onInput={
+                    <input name="input-email" className="input-email input" type="email" placeholder={props.value} onChange={
                         (event) => { props.setValueEmail(event.target.value) }
                     }/>
                 </label>

@@ -7,8 +7,8 @@ import {useState} from "react";
 
 function PreviousJob(props) {
 
-    const [valueCompany, setValueCompany] = useState("Microsoft")
-    const [valueJobTitle, setValueJobTitle] = useState("Software Developer")
+    const [valueCompany, setValueCompany] = useState("Initech")
+    const [valueJobTitle, setValueJobTitle] = useState("Senior Customer Relations Liason")
     const [valueJobDescription, setValueJobDescription] = useState("Well--well look. I already told you: I deal with the god damn customers so the engineers don't have to. I have people skills; I am good at dealing with people. Can't you understand that? What the hell is wrong with you people?")
 
     return (

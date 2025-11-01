@@ -3,14 +3,11 @@ import College from './Education/College';
 import Degree from './Education/Degree';
 import DateEarned from './Education/DateEarned';
 import {useEffect, useState} from "react";
+import ButtonSubmit from "./ButtonSubmit.jsx";
+import ButtonEdit from "./ButtonEdit.jsx";
 
 function Education() {
     const [editing, setEditing] = useState(true)
-    function handleSubmit() {
-        console.log('handlesubmit ran')
-
-        setEditing(false)
-    }
 
     const [valueCollege, setValueCollege] = useState("University of Washington")
     const [valueDegree, setValueDegree] = useState("Bachelor's of Science")
@@ -27,9 +24,11 @@ function Education() {
                 <College editing={editing} value={valueCollege} setValue={setValueCollege}/>
                 <Degree editing={editing} value={valueDegree} setValue={setValueDegree}/>
                 <DateEarned editing={editing} value={valueDateEarned} setValue={setValueDateEarned}/>
-                <button id="button-submit" className="button" onClick={() => handleSubmit()}>Submit</button>
+                <ButtonSubmit editing={editing} setEditing={setEditing} />
+                {/*<button id="button-submit" className="button" onClick={() => handleSubmit()}>Submit</button>*/}
             </form>
-            <button id="button-edit" className="button visually-hidden">Edit</button>
+            <ButtonEdit editing={editing} setEditing={setEditing} />
+            {/*<button id="button-edit" className="button visually-hidden">Edit</button>*/}
         </section>
     )
 }

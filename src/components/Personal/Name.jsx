@@ -4,7 +4,7 @@ function Name(props) {
             <div id="" className="name component container">
                 <label className="label-name label">
                     {"Name: "}
-                    <input name='input-name' className="input-name input" type='text' placeholder={props.value} onInput={
+                    <input name='input-name' className="input-name input" type='text' placeholder={props.value} onChange={
                         (event) => { props.setValueName(event.target.value) }
                     }/>
                 </label>

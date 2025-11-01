@@ -1,16 +1,13 @@
 import { useState, useEffect } from 'react'
 import '../styles/Personal.css'
+import ButtonSubmit from './ButtonSubmit.jsx'
+import ButtonEdit from './ButtonEdit'
 import Name from './Personal/Name'
 import Email from './Personal/Email'
 import Phone from './Personal/Phone'
 
 function Personal() {
     const [editing, setEditing] = useState(true)
-    function handleSubmit() {
-        console.log('handlesubmit ran')
-
-        setEditing(false)
-    }
 
     const [valueName, setValueName] = useState("John Doe")
     const [valueEmail, setValueEmail] = useState("e.mail@email.com")
@@ -27,9 +24,11 @@ function Personal() {
                 <Name editing={editing} value={valueName} setValueName={setValueName} />
                 <Email editing={editing} value={valueEmail} setValueEmail={setValueEmail} />
                 <Phone editing={editing} value={valuePhone} setValuePhone={setValuePhone} />
-                <button id="" className="button-submit-personal button-submit button" onClick={() => handleSubmit()}>Submit</button>
+                <ButtonSubmit editing={editing} setEditing={setEditing} />
+                {/*<button id="" className="button-submit-personal button-submit button" onClick={() => handleSubmit()}>Submit</button>*/}
             </form>
-            <button id="" className="button-edit-personal button-edit button visually-hidden">Edit</button>
+            <ButtonEdit editing={editing} setEditing={setEditing} />
+            {/*<button id="" className="button-edit-personal button-edit button visually-hidden">Edit</button>*/}
         </section>
     )
 }

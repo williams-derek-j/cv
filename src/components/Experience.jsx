@@ -2,15 +2,11 @@ import "../styles/Experience.css"
 import "../styles/Experience/PreviousJob.css"
 import PreviousJob from "./Experience/PreviousJob.jsx"
 import {useEffect, useState} from "react";
+import ButtonEdit from "./ButtonEdit.jsx";
+import ButtonSubmit from "./ButtonSubmit.jsx";
 
 function Experience() {
     const [editing, setEditing] = useState(true)
-    function handleSubmit() {
-        console.log('handleSubmit ran')
-
-        setEditing(false)
-    }
-
     useEffect(() => {
         console.log('useeffect ran')
     }, [editing])
@@ -23,9 +19,11 @@ function Experience() {
                     <PreviousJob editing={editing}/>
                     <PreviousJob editing={editing}/>
                 </div>
-                <button id="" className="button-submit button" onClick={() => handleSubmit()}>Submit</button>
+                <ButtonSubmit editing={editing} setEditing={setEditing} />
+                {/*<button id="" className="button-submit button" onClick={() => handleSubmit()}>Submit</button>*/}
             </form>
-            <button id="" className="button-edit button visually-hidden">Edit</button>
+            <ButtonEdit editing={editing} setEditing={setEditing} />
+            {/*<button id="" className="button-edit button visually-hidden">Edit</button>*/}
         </section>
     )
 }
