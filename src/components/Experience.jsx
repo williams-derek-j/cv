@@ -14,9 +14,13 @@ function Experience() {
 
     const [jobCount, setJobCount] = useState(2);
 
+    function deleteJob(index) {
+        jobs.splice(index, 1)
+    }
+
     const jobs = []
     for (let i = 0; i < jobCount; i++) {
-        jobs.push(<PreviousJob key={crypto.randomUUID()} editing={editing} />)
+        jobs.push(<PreviousJob key={i} editing={editing} deleteJob={deleteJob} setJobCount={setJobCount} getJobCount={jobCount} />)
     }
 
     return (
@@ -25,11 +29,9 @@ function Experience() {
             <form id="" className="form-experience form" onSubmit={(event) => event.preventDefault()}>
                 <div id="" className="workHistory container">
                     {jobs}
-                    {/*<PreviousJob editing={editing}/>*/}
-                    {/*<PreviousJob editing={editing}/>*/}
                 </div>
                 <ButtonSubmit editing={editing} setEditing={setEditing} />
-                <ButtonJobAdd editing={editing} setValue={setJobCount} getValue={jobCount} />
+                <ButtonJobAdd editing={editing} setJobCount={setJobCount} getJobCount={jobCount} />
             </form>
             <ButtonEdit editing={editing} setEditing={setEditing} />
         </section>
