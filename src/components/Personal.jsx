@@ -21,6 +21,10 @@ function Personal() {
         setEditing(false)
     }
 
+    const [valueName, setValueName] = useState("John Doe")
+    const [valueEmail, setValueEmail] = useState("e.mail@email.com")
+    const [valuePhone, setValuePhone] = useState("(206) 867-5309")
+
     useEffect(() => {
         console.log('useeffect ran')
     }, [editing])
@@ -32,9 +36,9 @@ function Personal() {
                 {/*{Object.entries(components).map(([key, Component]) => {*/}
                 {/*    return <Component key={key} editing/>*/}
                 {/*})}*/}
-                <Name editing={editing}/>
-                <Email editing={editing}/>
-                <Phone editing={editing}/>
+                <Name editing={editing} value={valueName} setValueName={setValueName} />
+                <Email editing={editing} value={valueEmail} setValueEmail={setValueEmail} />
+                <Phone editing={editing} value={valuePhone} setValuePhone={setValuePhone} />
                 <button id="" className="button-submit-personal button-submit button" onClick={() => handleSubmit()}>Submit</button>
             </form>
             <button id="" className="button-edit-personal button-edit button visually-hidden">Edit</button>
