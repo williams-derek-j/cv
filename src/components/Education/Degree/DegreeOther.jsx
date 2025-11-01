@@ -1,8 +1,8 @@
 function DegreeOther(props) {
-    if (props.selected && props.editing) {
+    if (props.selected) {
         return (
             <label htmlFor="input-degree" className='label-degree label'> {/*for manually inputting other degrees*/}
-                {"Degree: "}
+                {"Alternate title: "}
                 <input name="input-degree" className="input-degree input" type="text" placeholder={props.value} onChange={
                     (event) => { props.setValue(event.target.value) }
                 }/>

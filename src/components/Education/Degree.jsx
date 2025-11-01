@@ -33,7 +33,7 @@ function Degree(props) {
                         <option value="Other">Other</option>
                     </select>
                 </label>
-                <DegreeOther editing={props.editing} selected={selected} setValue={props.setValue}/>
+                <DegreeOther selected={selected} setValue={props.setValue}/>
             </div>
         )
     } else {
